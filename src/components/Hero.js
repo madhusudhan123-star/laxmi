@@ -30,7 +30,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="text-6xl font-bold mb-4"
                 >
-                    Welcome to Laxmi Nilayam
+                    Welcome to Lakshmi Nilayam
                 </motion.h1>
                 <motion.p
                     initial={{ y: 100 }}

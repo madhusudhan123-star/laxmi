@@ -23,7 +23,7 @@ const Contact = () => {
                         Contact Us
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-800 mx-auto mt-4 rounded-full"></div>
-                    <p className="mt-4 text-gray-700 text-lg">Your Journey to Laxmi Nilayam Starts Here</p>
+                    <p className="mt-4 text-gray-700 text-lg">Your Journey to Lakshmi Nilayam Starts Here</p>
                 </motion.div>
 
                 {/* Contact Details and Map */}
@@ -38,7 +38,7 @@ const Contact = () => {
                         <h3 className="text-3xl font-bold text-blue-700 mb-4">Location:</h3>
                         <p className="text-gray-600 font-merriweather mb-4">
                             Your Dream home Awaits at<br />
-                            Laxmi Nilayam<br />
+                            Lakshmi Nilayam<br />
                             D.No 272 & 273, Logos Public School Lane, Syamalanagar Extension, Guntur – 522006
                         </p>
 
@@ -59,7 +59,7 @@ const Contact = () => {
                         </p>
 
                         <p className="mt-6 text-gray-600 font-merriweather">
-                            Laxmi Nilayam – Where dreams come to life, and every day feels like a celebration.
+                            Lakshmi Nilayam – Where dreams come to life, and every day feels like a celebration.
                         </p>
                     </motion.div>
                 </div>

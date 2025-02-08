@@ -202,9 +202,9 @@ const Amenities = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <h2 className="text-3xl font-bold text-blue-700">Come, Discover the Joy of Living at Laxmi Nilayam</h2>
+                    <h2 className="text-3xl font-bold text-blue-700">Come, Discover the Joy of Living at Lakshmi Nilayam</h2>
                     <p className="mt-4 text-gray-600 text-lg font-merriweather">
-                        Laxmi Nilayam is more than just a place to live—it’s a place to thrive. Your dream home
+                        Lakshmi Nilayam is more than just a place to live—it’s a place to thrive. Your dream home
                         awaits in the heart of Guntur. Make the move today and embrace a lifestyle that offers
                         nothing short of excellence.
                     </p>

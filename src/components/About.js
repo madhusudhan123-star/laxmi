@@ -307,7 +307,7 @@ const About = () => {
                                     variants={fadeIn}
                                     className="font-merriweather text-base md:text-lg text-gray-700 leading-relaxed"
                                 >
-                                    Laxmi Nilayam is a place where your dream home becomes a reality. This gated community
+                                    Lakshmi Nilayam is a place where your dream home becomes a reality. This gated community
                                     is designed to offer a perfect mix of comfort, style, and convenience.
                                     Madhu Infrastructure Pvt Ltd is reinventing real estate spaces by pairing the industry's top
                                     talents with technology. The brightest of minds in engineering, design and strategy work
