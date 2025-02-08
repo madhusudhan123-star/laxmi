@@ -30,7 +30,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Contact Information */}
                     <motion.div
-                        className="p-8 rounded-2xl bg-white bg-opacity-70 backdrop-blur-md shadow-lg"
+                        className="p-8 rounded-2xl bg-white backdrop-blur-md shadow-lg"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -42,7 +42,17 @@ const Contact = () => {
                             D.No 272 & 273, Logos Public School Lane, Syamalanagar Extension, Guntur – 522006
                         </p>
 
-                        <h3 className="text-3xl font-bold text-blue-700 mt-6 mb-4">Contact Us:</h3>
+
+                    </motion.div>
+
+                    {/* Google Maps */}
+                    <motion.div
+                        className="rounded-2xl overflow-hidden bg-white p-8 shadow-lg"
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <h3 className="text-3xl font-bold text-blue-700 mb-4">Call Now:</h3>
                         <p className="text-gray-600 font-merriweather">
                             Phone: +91 70751 55555<br />
 
@@ -51,25 +61,6 @@ const Contact = () => {
                         <p className="mt-6 text-gray-600 font-merriweather">
                             Laxmi Nilayam – Where dreams come to life, and every day feels like a celebration.
                         </p>
-                    </motion.div>
-
-                    {/* Google Maps */}
-                    <motion.div
-                        className="rounded-2xl overflow-hidden shadow-lg"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.191649445474!2d80.44997437448848!3d16.31240438426238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a73a98e05a40d%3A0x3c56a39504c9922c!2sLogos%20Public%20School!5e0!3m2!1sen!2sin!4v1718348921424!5m2!1sen!2sin"
-                            width="100%"
-                            height="450"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Laxmi Nilayam Location"
-                        ></iframe>
                     </motion.div>
                 </div>
 

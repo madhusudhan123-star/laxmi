@@ -161,28 +161,7 @@ const Gallery = () => {
                         Our Gallery
                     </motion.h2>
 
-                    {/* Category Filter Buttons */}
-                    <motion.div
-                        className="flex flex-wrap justify-center gap-4 mb-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                    >
-                        {categories.map((category) => (
-                            <motion.button
-                                key={category.id}
-                                onClick={() => setSelectedCategory(category.id)}
-                                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
-                                    ${selectedCategory === category.id
-                                        ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50'}`}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {category.label}
-                            </motion.button>
-                        ))}
-                    </motion.div>
+
                 </motion.div>
 
                 {/* Updated Traditional Row-based Layout */}
