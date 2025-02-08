@@ -36,8 +36,11 @@ const Navbar = () => {
                         whileHover={{ scale: 1.05 }}
                         className="flex-shrink-0"
                     >
-                        <a href="#home" className={`text-2xl font-bold `}>
-                            <img src={logo} alt="Logo" className="h-20" />
+                        <a href="#home" className="flex items-center space-x-1">
+                            <img src={logo} alt="Logo" className="h-16 w-auto" />
+                            <div className="">
+                                <span className="text-2xl font-bold text-blue-600">Lakshmi Nilayam</span>
+                            </div>
                         </a>
                     </motion.div>
 
