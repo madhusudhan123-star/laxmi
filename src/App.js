@@ -8,6 +8,7 @@ import FloorPlans from "./components/FloorPlans";
 import Amenities from "./components/Amenities";
 import Contact from "./components/Contact";
 import RoomMaps from "./components/RoomMaps";
+import DownloadBrochure from "./components/DownloadBrochure";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Amenities />
       <Gallery />
       <Contact />
+      <DownloadBrochure />
     </div>
   );
 }

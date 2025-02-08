@@ -5,6 +5,7 @@ import totLots from '../assets/one_three.jpeg';
 import multiPurposeHall from '../assets/one_two.jpeg';
 import gymnasium from '../assets/sueight.jpg';
 import indoorGames from '../assets/susix.jpg';
+import IlluminatedCard from './IlluminatedCard';
 
 const Amenities = () => {
     return (
@@ -71,66 +72,127 @@ const Amenities = () => {
 
                 {/* Built to Last Section */}
                 <motion.div
-                    className="mt-16 p-8 rounded-2xl bg-white bg-opacity-70 backdrop-blur-md shadow-lg"
+                    className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 backdrop-blur-md shadow-lg"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <h2 className="text-3xl font-bold text-blue-700 mb-4">Built to Last, Designed for You</h2>
-                    <p className="text-gray-600 font-merriweather">
-                        Laxmi Nilayam apartments are built with the highest quality standards, blending durability with elegance
-                    </p>
-                    <ul className="list-none mt-4 space-y-2">
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Framed Structure:</span> R.C.C. construction designed to withstand
-                                seismic loads for added peace of mind.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Walls:</span> External walls are 9” thick, offering solid insulation and
-                                privacy.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Doors and Windows:</span> Main doors crafted from teak wood, internal
-                                doors smooth-finished, with PVC/UPVC windows and designer hardware.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Paint:</span> High-quality exterior and interior finishes to maintain a fresh
-                                look over the years.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Flooring:</span> Elegant vitrified tiles in living, dining, and bedrooms;
-                                acid-resistant, anti-skid tiles in the bathrooms.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Kitchen:</span> Stylish granite countertops and stainless-steel sink, with
-                                provisions for a water purifier.
-                            </p>
-                        </li>
-                        <li className="flex items-start">
-                            <span className="mr-2 text-blue-500">•</span>
-                            <p className="text-gray-600">
-                                <span className="font-semibold font-merriweather">Utilities:</span> Dedicated areas for your washing machine and a wet area
-                                for the kitchen.
-                            </p>
-                        </li>
-                    </ul>
+                    <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-8 text-center">
+                        Built to Last, Designed for You
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                            {
+                                title: "Structural Excellence",
+                                icon: "🏗️",
+                                items: [
+                                    "R.C.C. framed structure",
+                                    "Seismic load resistance",
+                                    "9-inch thick external walls",
+                                    "Superior insulation"
+                                ]
+                            },
+                            {
+                                title: "Premium Finishes",
+                                icon: "🎨",
+                                items: [
+                                    "High-quality exterior paint",
+                                    "Elegant interior finishes",
+                                    "Designer wall textures",
+                                    "Weather-resistant coating"
+                                ]
+                            },
+                            {
+                                title: "Doors & Windows",
+                                icon: "🚪",
+                                items: [
+                                    "Teak wood main doors",
+                                    "Smooth-finished internal doors",
+                                    "PVC/UPVC windows",
+                                    "Designer hardware fittings"
+                                ]
+                            },
+                            {
+                                title: "Flooring & Tiles",
+                                icon: "✨",
+                                items: [
+                                    "Vitrified tiles in living areas",
+                                    "Anti-skid bathroom tiles",
+                                    "Acid-resistant kitchen tiles",
+                                    "Premium marble in common areas"
+                                ]
+                            },
+                            {
+                                title: "Kitchen Excellence",
+                                icon: "🍳",
+                                items: [
+                                    "Granite countertops",
+                                    "Stainless steel sink",
+                                    "Water purifier provision",
+                                    "Modular kitchen setup"
+                                ]
+                            },
+                            {
+                                title: "Utility & Convenience",
+                                icon: "🔧",
+                                items: [
+                                    "Washing machine area",
+                                    "Dedicated wet kitchen space",
+                                    "Utility balcony",
+                                    "Service area provisions"
+                                ]
+                            }
+                        ].map((category, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                className="relative group"
+                            >
+                                <IlluminatedCard className="h-full bg-white/80 hover:bg-white/95 transition-all duration-300 rounded-xl p-6">
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        className="space-y-4"
+                                    >
+                                        <div className="flex items-center space-x-3 mb-4">
+                                            <span className="text-2xl">{category.icon}</span>
+                                            <h3 className="text-xl font-semibold text-gray-800">
+                                                {category.title}
+                                            </h3>
+                                        </div>
+
+                                        <motion.ul className="space-y-3">
+                                            {category.items.map((item, itemIndex) => (
+                                                <motion.li
+                                                    key={itemIndex}
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: itemIndex * 0.1 }}
+                                                    className="flex items-start space-x-2"
+                                                >
+                                                    <span className="text-blue-500 mt-1">
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                    </span>
+                                                    <span className="text-gray-700 font-merriweather">{item}</span>
+                                                </motion.li>
+                                            ))}
+                                        </motion.ul>
+
+                                        <motion.div
+                                            className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            initial={false}
+                                            animate={{ scale: [0.95, 1] }}
+                                            transition={{ duration: 0.3 }}
+                                        />
+                                    </motion.div>
+                                </IlluminatedCard>
+                            </motion.div>
+                        ))}
+                    </div>
                 </motion.div>
 
                 {/* Discover the Joy Section */}
@@ -146,28 +208,6 @@ const Amenities = () => {
                         awaits in the heart of Guntur. Make the move today and embrace a lifestyle that offers
                         nothing short of excellence.
                     </p>
-                </motion.div>
-
-                {/* Ask Us Anything Section */}
-                <motion.div
-                    className="mt-16 p-8 rounded-2xl bg-white bg-opacity-70 backdrop-blur-md shadow-lg"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                >
-                    <h2 className="text-3xl font-bold text-blue-700 mb-4">Ask us anything – we’re just a message away</h2>
-                    <p className="text-gray-600 font-merriweather">
-                        Simply type your questions in the box below, and our team will get back to you with all the
-                        information you need. Let’s make your dream home a reality!
-                    </p>
-                    <input
-                        type="text"
-                        placeholder="Type your question here..."
-                        className="mt-4 w-full p-4 rounded-lg bg-gray-100 text-gray-700 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                    />
-                    <button className="mt-4 w-full py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:bg-gradient-to-l transition-colors duration-300">
-                        Send Message
-                    </button>
                 </motion.div>
             </div>
         </section>

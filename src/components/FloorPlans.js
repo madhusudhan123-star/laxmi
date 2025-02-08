@@ -174,7 +174,7 @@ const FloorPlans = () => {
     };
 
     return (
-        <section className="relative min-h-screen py-20 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
+        <section id="floor-plans" className="relative min-h-screen py-20 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
             {/* Enhanced animated background */}
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-rose-500/20" />

@@ -8,7 +8,7 @@ const Banner = () => {
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-purple-600/30"></div>
             </div>
-            
+
             <div className="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -17,33 +17,11 @@ const Banner = () => {
                     className="text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-                        Welcome to Laxmi Nilayam
+                        Live Your Dream, Celebrate Every Day
                     </h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        className="mt-6 text-xl md:text-2xl max-w-3xl mx-auto"
-                    >
-                        Where Luxury Meets Comfort
-                    </motion.p>
-                    
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        className="mt-10"
-                    >
-                        <a
-                            href="#contact"
-                            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300"
-                        >
-                            Contact Us
-                        </a>
-                    </motion.div>
                 </motion.div>
             </div>
-            
+
             {/* Decorative elements */}
             <div className="absolute bottom-0 left-0 right-0">
                 <svg

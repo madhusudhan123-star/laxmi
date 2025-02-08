@@ -45,8 +45,7 @@ const Contact = () => {
                         <h3 className="text-3xl font-bold text-blue-700 mt-6 mb-4">Contact Us:</h3>
                         <p className="text-gray-600 font-merriweather">
                             Phone: +91 70751 55555<br />
-                            Email: parkville.gnt@gmail.com<br />
-                            Website: www.parkville.co.in
+
                         </p>
 
                         <p className="mt-6 text-gray-600 font-merriweather">
@@ -75,55 +74,7 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Form */}
-                <motion.div
-                    className="mt-16 p-8 rounded-2xl bg-white bg-opacity-70 backdrop-blur-md shadow-lg"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                    <h2 className="text-3xl font-bold text-blue-700 mb-4">Send us a Message</h2>
-                    <form className="space-y-4">
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                                Name
-                            </label>
-                            <input
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="name"
-                                type="text"
-                                placeholder="Your Name"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                                Email
-                            </label>
-                            <input
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="email"
-                                type="email"
-                                placeholder="Your Email"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                                Message
-                            </label>
-                            <textarea
-                                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="message"
-                                placeholder="Your Message"
-                                rows="4"
-                            ></textarea>
-                        </div>
-                        <button
-                            className="bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-l text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit"
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                </motion.div>
+
             </div>
         </section>
     );

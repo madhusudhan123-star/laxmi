@@ -51,8 +51,8 @@ const Gallery = () => {
         {
             id: 3,
             image: three,
-            title: "Kitchen",
-            description: "Modern modular kitchen with premium fittings",
+            title: "Bedroom",
+            description: "Modern modular Bedroom with premium fittings",
             category: "interior",
             size: "medium",
             aspectRatio: "square"
@@ -60,8 +60,8 @@ const Gallery = () => {
         {
             id: 4,
             image: four,
-            title: "Master Bedroom",
-            description: "Spacious bedroom with premium finishes",
+            title: "Swimming Pool",
+            description: "Spacious Swimming Pool with premium finishes",
             category: "amenities",
             size: "vertical", // Changed size for vertical images
             aspectRatio: "portrait"
@@ -69,9 +69,9 @@ const Gallery = () => {
         {
             id: 5,
             image: five,
-            title: "Premium Bathroom",
-            description: "Luxury bathroom with modern fittings",
-            category: "interior",
+            title: "Premium Rooms",
+            description: "Luxury House with modern fittings",
+            category: "",
             size: "small"
         },
         {
@@ -88,7 +88,7 @@ const Gallery = () => {
             image: seven,
             title: "Community Area",
             description: "Spacious community spaces for residents",
-            category: "amenities",
+            category: "interior",
             size: "medium"
         },
         {
@@ -103,17 +103,17 @@ const Gallery = () => {
         {
             id: 9,
             image: nine,
-            title: "Garden View",
-            description: "Beautifully landscaped gardens",
-            category: "amenities",
+            title: "Hall",
+            description: "Beautifully designed hall with modern interiors",
+            category: "interior",
             size: "medium"
         },
         {
             id: 10,
             image: ten,
-            title: "Night View",
-            description: "Stunning night view of the property",
-            category: "exterior",
+            title: "Master BedRoom",
+            description: "Master BedRoom property",
+            category: "interior",
             size: "large"
         }
     ];
@@ -127,7 +127,7 @@ const Gallery = () => {
     }, [selectedCategory]);
 
     return (
-        <section className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section id="gallery" className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white">
             {/* Fancy Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute w-full h-full">

@@ -99,13 +99,13 @@ const About = () => {
         },
         {
             src: two,
-            title: 'Premium Amenities',
+            title: 'Premium Aperments',
             description: 'World-class facilities'
         },
         {
             src: three,
-            title: 'Green Spaces',
-            description: 'Nature-inspired living'
+            title: 'World class BedRoom',
+            description: 'Comfortable living spaces'
         }
     ];
 
@@ -357,109 +357,100 @@ const About = () => {
                             </motion.div>
                         </div>
 
-                        {/* Enhanced Mission Section */}
+                        {/* Enhanced Mission & Values Section */}
                         <motion.div
                             variants={fadeIn}
-                            className="relative bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl md:rounded-3xl p-6 md:p-12 mt-8 md:mt-16 overflow-hidden"
+                            className="relative bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-8 md:p-16 mt-12 overflow-hidden"
                         >
-                            {/* Animated background elements */}
+                            {/* Animated background patterns */}
                             <motion.div
-                                className="absolute -right-20 -top-20 w-64 h-64 bg-blue-200 rounded-full opacity-20"
-                                animate={{
-                                    scale: [1, 1.2, 1],
-                                    rotate: [0, 90, 0]
-                                }}
-                                transition={{
-                                    duration: 8,
-                                    repeat: Infinity
-                                }}
-                            />
-                            <motion.div
-                                className="absolute -left-20 -bottom-20 w-72 h-72 bg-purple-200 rounded-full opacity-20"
-                                animate={{
-                                    scale: [1.2, 1, 1.2],
-                                    rotate: [90, 0, 90]
-                                }}
-                                transition={{
-                                    duration: 10,
-                                    repeat: Infinity
+                                className="absolute inset-0"
+                                style={{
+                                    backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)'
                                 }}
                             />
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-10">
-                                {/* Mission Content */}
+                            {/* Mission Section */}
+                            <div className="relative z-10 mb-16">
                                 <motion.div
-                                    className="space-y-4 md:space-y-6"
-                                    variants={missionAnimation}
+                                    initial={{ x: -50, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="max-w-3xl mx-auto text-center mb-12"
                                 >
-                                    <div className="flex items-center space-x-3 md:space-x-4">
-                                        <div className="w-8 md:w-12 h-1 bg-blue-600"></div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Our Mission</h3>
-                                    </div>
-                                    <IlluminatedCard className="bg-white/80 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-6 shadow-lg">
-                                        <motion.div
-                                            className="relative"
-                                            whileHover={{ scale: 1.02 }}
-                                            transition={{ type: "spring", stiffness: 300 }}
-                                        >
-                                            <p className="text-gray-700 font-merriweather leading-relaxed">
-                                                Our mission is to build innovative real estate development projects in Andhra Pradesh and
-                                                Telangana. We believe in the ability to convert challenging situations into opportunities.
-                                                Teamwork being our foundation, we embrace values with an open mind. We follow high
-                                                ethical standards, aim to overcome expectations and excel in every project we undertake.
-                                                At Laxmi Nilayam, every detail is thoughtfully created to make your life easier and more
-                                                enjoyable. It's not just a home—it's a place you'll be proud to call home.
-                                                Join us and experience the essence of modern living redefined.
-                                            </p>
-                                        </motion.div>
+                                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                                        Our Mission
+                                    </h2>
+                                    <IlluminatedCard className="bg-white/90 backdrop-blur-lg rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                                        <p className="text-lg md:text-xl text-gray-700 font-merriweather leading-relaxed">
+                                            To revolutionize living spaces in Andhra Pradesh and Telangana through innovative real estate development.
+                                            We transform challenges into opportunities, embracing teamwork and upholding the highest ethical standards.
+                                            Every project we undertake is a testament to our commitment to excellence and our vision of creating
+                                            communities that inspire pride and joy in their residents.
+                                        </p>
                                     </IlluminatedCard>
                                 </motion.div>
-
-                                {/* Values Content */}
-                                <motion.div className="space-y-4 md:space-y-6">
-                                    <div className="flex items-center space-x-3 md:space-x-4">
-                                        <div className="w-8 md:w-12 h-1 bg-purple-600"></div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Our Values</h3>
-                                    </div>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                                        {values.map((value, index) => (
-                                            <IlluminatedCard key={index} className="relative">
-                                                <motion.div
-                                                    variants={floatingElements}
-                                                    whileHover={{
-                                                        y: -5,
-                                                        transition: { type: "spring", stiffness: 300 }
-                                                    }}
-                                                    className={`bg-gradient-to-br ${value.color} text-white p-6 rounded-xl shadow-lg`}
-                                                >
-                                                    <div className="absolute inset-0 bg-white/5 rounded-xl backdrop-blur-[2px]" />
-                                                    <motion.div
-                                                        animate={{
-                                                            rotate: [0, 5, -5, 0],
-                                                            transition: {
-                                                                duration: 5,
-                                                                repeat: Infinity,
-                                                                ease: "easeInOut"
-                                                            }
-                                                        }}
-                                                        className="relative z-10"
-                                                    >
-                                                        <motion.div
-                                                            whileHover={{ scale: 1.2, rotate: 360 }}
-                                                            transition={{ type: "spring", stiffness: 300 }}
-                                                            className="mb-4 w-12 h-12 mx-auto"
-                                                        >
-                                                            {value.icon}
-                                                        </motion.div>
-                                                        <h4 className="text-lg font-semibold mb-2">{value.title}</h4>
-                                                        <p className="text-sm opacity-90">{value.description}</p>
-                                                    </motion.div>
-                                                </motion.div>
-                                            </IlluminatedCard>
-                                        ))}
-                                    </div>
-                                </motion.div>
                             </div>
+
+                            {/* Values Section */}
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.8 }}
+                                className="relative z-10"
+                            >
+                                <h2 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">
+                                    Our Values
+                                </h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    {[
+                                        {
+                                            title: "Innovation",
+                                            icon: <LightBulbIcon className="w-10 h-10" />,
+                                            description: "Pioneering new standards in real estate development",
+                                            gradient: "from-blue-500 via-blue-400 to-blue-300"
+                                        },
+                                        {
+                                            title: "Excellence",
+                                            icon: <StarIcon className="w-10 h-10" />,
+                                            description: "Delivering outstanding quality in every detail",
+                                            gradient: "from-purple-500 via-purple-400 to-purple-300"
+                                        },
+                                        {
+                                            title: "Integrity",
+                                            icon: <ShieldCheckIcon className="w-10 h-10" />,
+                                            description: "Building trust through transparent practices",
+                                            gradient: "from-emerald-500 via-emerald-400 to-emerald-300"
+                                        },
+                                        {
+                                            title: "Sustainability",
+                                            icon: <GlobeAltIcon className="w-10 h-10" />,
+                                            description: "Creating eco-friendly living spaces for the future",
+                                            gradient: "from-pink-500 via-pink-400 to-pink-300"
+                                        }
+                                    ].map((value, index) => (
+                                        <motion.div
+                                            key={index}
+                                            whileHover={{ y: -8, scale: 1.02 }}
+                                            transition={{ type: "spring", stiffness: 300 }}
+                                        >
+                                            <IlluminatedCard className={`h-full bg-gradient-to-br ${value.gradient} text-white rounded-2xl p-8 shadow-xl`}>
+                                                <div className="flex flex-col items-center text-center space-y-4">
+                                                    <motion.div
+                                                        whileHover={{ rotate: 360 }}
+                                                        transition={{ duration: 0.5 }}
+                                                        className="bg-white/20 rounded-full p-4 backdrop-blur-sm"
+                                                    >
+                                                        {value.icon}
+                                                    </motion.div>
+                                                    <h3 className="text-2xl font-bold">{value.title}</h3>
+                                                    <p className="text-white/90">{value.description}</p>
+                                                </div>
+                                            </IlluminatedCard>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </motion.div>
                         </motion.div>
                     </motion.div>
                 </div>
